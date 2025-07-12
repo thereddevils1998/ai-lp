@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIプログラミング学習コミュニティ</title>
+    <style>
+        :root {
+            --primary-color: #e24a4a;
+            --secondary-color: #e3a050;
+            --background-color: #f7f4f4;
+            --text-color: #333;
+            --white-color: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('header-image.avif') no-repeat center center/cover;
+            color: var(--white-color);
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: #c44747;
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        section:nth-child(odd) {
+            background-color: var(--white-color);
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .feature {
+            background: var(--white-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            width: 30%;
+            min-width: 280px;
+            flex-grow: 1;
+        }
+        .feature h3 {
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+        .how-to-join {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+        .steps li {
+            background: var(--white-color);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: relative;
+            padding-left: 50px;
+            text-align: left;
+        }
+        .steps li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        #final-cta {
+            background: var(--white-color);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: var(--white-color);
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .feature {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>AIプログラミングを、仲間と共に学ぶ。</h1>
+            <p>次世代のスキルを、最速で身につけるためのオンラインコミュニティ</p>
+            <a href="https://discord.gg/your-invite-code" class="cta-button" target="_blank">Discordに参加する</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>コミュニティで学べること</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Python基礎から機械学習まで</h3>
+                        <p>初心者でも安心。環境構築から丁寧にサポートし、AI開発の土台となるスキルを習得します。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>最新AIツールの活用法</h3>
+                        <p>ChatGPTやCopilotなど、話題のAIツールを実践的に使いこなすノウハウを共有します。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>実践的なポートフォリオ制作</h3>
+                        <p>仲間とチームを組んで、オリジナルのAIアプリケーション開発に挑戦。転職や案件獲得に繋げます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="join">
+            <div class="container">
+                <h2>参加は簡単3ステップ</h2>
+                <div class="how-to-join">
+                    <ol class="steps">
+                        <li>下の「Discordに参加する」ボタンをクリック。</li>
+                        <li>Discordアカウントで認証し、サーバーに参加。</li>
+                        <li>自己紹介チャンネルで挨拶して、学習をスタート！</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="final-cta">
+            <div class="container">
+                <h2>さあ、AIプログラミングの世界へ飛び込もう</h2>
+                <p>あなたの参加を、コミュニティメンバー一同お待ちしています。</p>
+                <a href="https://discord.gg/your-invite-code" class="cta-button" target="_blank">今すぐコミュニティに参加する</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AIプログラミング学習コミュニティ. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
